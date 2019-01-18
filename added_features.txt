@@ -1,0 +1,6 @@
+1. in jet.js checkShooting function is updated and added a global variable named shootInterval.
+2. in view.js, shootInterval++; is added.
+3. in jet.js file in line 26 , here in for loop 20 is replaced with 70.
+4. in html file a div is added in 65 number line. and inter css is added
+5. tulshi.js file is paste to the folder
+6. in init function of view.js file in line no. 20 a condition statement is added.
