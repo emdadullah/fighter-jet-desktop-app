@@ -1,1 +1,0 @@
-var fighterJet = new Jet();
