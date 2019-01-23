@@ -1,0 +1,13 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.bs122.crypto-app
+win:
+  target: nsis
+  icon: assets/icons/icon.ico
+mac:
+  target: default
+  icon: assets/icons/win/icon.icns
+linux:
+  target: deb
+electronVersion: 4.0.1
