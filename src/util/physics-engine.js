@@ -2,7 +2,6 @@ var CollisionDetector = {
 
     isCollide: function (obj2, obj1) {
         var val = 0;
-        debugger;
         for (var j = 0; j < 4; j++) {
             var check = [2, 2, 2, 2];
             var ok = 5;
