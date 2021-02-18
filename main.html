@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Fighter Jet Desktop Game</title>
+</head>
+
+<body>
+
+    <audio id="fire">
+        <source src="sound/sound_design_effect_descend_futuristic_short-[AudioTrimmer.com].mp3">
+    </audio>
+    <audio id="enemyKill">
+        <source src="sound/Explosion+7.mp3">
+    </audio>
+    <audio id="collideEnemy">
+        <source src="sound/explosion-[AudioTrimmer.com].mp3">
+    </audio>
+    <audio id="gameOver">
+        <source src="sound/TunePocket-Game-Over-Sound-3-Preview-[AudioTrimmer.com].mp3">
+    </audio>
+
+
+    <div class="container" style="margin: 5px">
+
+        <button style="position:absolute;z-index:1;" type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#exampleModal">
+            Launch demo modal
+        </button>
+
+        <div class="row">
+            <div class="col">
+                <div style="position:absolute;z-index:1;" class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+                <h3>Level</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Score</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Life</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span class='start-btn' onclick="pauseGame()">PAUSE</span>
+                <span class='start-btn' onclick="resumeGame()">START</span>
+                <span class='start-btn' onclick="restart()">RESTART</span>
+                <span class='start-btn' onclick="pauseGame()">EXIT</span>
+                <span class='start-btn' id="send-message">Contact</span>
+            </div>
+            <div class="col-md-9">
+                <canvas id='canvasEnemy' width='1000' height='500'></canvas>
+                <canvas id='canvasJet' width='1000' height='500'></canvas>
+                <canvas id='canvasScore' width='1000' height='500'></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-9">
+                <span class='video-game-button'>&larr;</span>
+                <span class='video-game-button'>&rarr;</span>
+                <span class='video-game-button'>&uarr;</span>
+                <span class='video-game-button'>&darr;</span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script>
+        window.$ = window.jQuery = require('./jquery-3.3.1.min.js');
+    </script>
+    <script src="src/util/boundary.js"></script>
+    <script src="src/util/dimen.js"></script>
+    <script src="src/util/physics-engine.js"></script>
+    <script src="src/game.js"></script>
+    <script src="src/environment/enemy.js"></script>
+    <script src="src/environment/explosion.js"></script>
+    <script src="src/environment/ground.js"></script>
+    <script src="src/environment/level.js"></script>
+    <script src="src/environment/score.js"></script>
+    <script src="src/entity/bullet.js"></script>
+    <script src="src/entity/fighter-jet.js"></script>
+    <script src="src/view/canvas.js"></script>
+    <script src="src/view/image-loader.js"></script>
+    <script src="src/view/canvas.js"></script>
+    <script src="src/view/image-loader.js"></script>
+    <script src="src/sendToSlack.js"></script>
+    <script src="src/index.js"></script>
+
+</body>
+
+</html>
